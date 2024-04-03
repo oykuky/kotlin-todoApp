@@ -5,25 +5,62 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.kotlin_todoapp.MainActivity"
-    >
+    android:gravity="center_horizontal"> <!-- Tüm içeriği yatayda ortalamak için -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Do App"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/title" />
+
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="New task" />
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittext_style"
+        android:padding="12dp"
+        android:hint="New task"
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/addButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add" />
+        android:layout_width="76dp"
+        android:layout_height="43dp"
+        android:text="+"
+        android:textSize="30sp"
+        android:background="@drawable/button_rounded_bg"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:stateListAnimator="@null"
+        android:drawablePadding="4dp"
+        android:radius="20dp"/>
 
     <Button
         android:id="@+id/removeAllButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remove All" />
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="43dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:textColor="@android:color/white"
+        android:text="Remove All"
+        android:background="@drawable/button_rounded_bg"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

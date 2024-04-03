@@ -14,18 +14,36 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import android.content.res.Resources
+import androidx.compose.ui.graphics.Color
+import com.example.kotlin_todoapp.R
+
+
+// Renklerin tanımlandığı XML dosyasını yükleyin
+val res = Resources.getSystem()
+val pinkColor = Color(res.getColor(R.color.pink))
+val lightPinkColor = Color(res.getColor(R.color.light_pink))
+val purpleColor = Color(res.getColor(R.color.purple))
+val blackColor = Color(res.getColor(R.color.black))
+val lightBlackColor = Color(res.getColor(R.color.light_black))
+val whiteColor = Color(res.getColor(R.color.white))
+val grayColor = Color(res.getColor(R.color.gray))
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = lightPinkColor,
+    secondary = pinkColor,
+    tertiary = blackColor,
+    background = whiteColor,
+    outline = purpleColor,
+
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
+    primary = lightPinkColor,
+    secondary = pinkColor,
+    tertiary = blackColor,
+    background = whiteColor,
+    outline = purpleColor,
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
