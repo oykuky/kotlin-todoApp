@@ -1,4 +1,5 @@
 package com.example.kotlin_todoapp
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -15,6 +16,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // 500 elemanlı liste oluşturma
+        for (i in 0 until 500) {
+            todoList.add("Todo $i")
+        }
 
         val addButton: Button = findViewById(R.id.addButton)
         val removeAllButton: Button = findViewById(R.id.removeAllButton)

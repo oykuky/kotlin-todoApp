@@ -25,6 +25,8 @@ class TodoAdapter(
         val todoItem = todoList[position]
         holder.taskTextView.text = todoItem
 
+        holder.itemView.background = holder.itemView.context.getDrawable(R.drawable.bg_item)
+
         holder.deleteButton.setOnClickListener {
             todoList.removeAt(position) // Liste öğesini kaldır
             notifyDataSetChanged() // Adapter'a değişiklik olduğunu bildir
