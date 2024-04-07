@@ -27,7 +27,7 @@ val purpleColor = Color(res.getColor(R.color.purple))
 val blackColor = Color(res.getColor(R.color.black))
 val lightBlackColor = Color(res.getColor(R.color.light_black))
 val whiteColor = Color(res.getColor(R.color.white))
-val grayColor = Color(res.getColor(R.color.gray))
+val grayColor = Color(res.getColor(R.color.light_gray))
 
 private val DarkColorScheme = darkColorScheme(
     primary = lightPinkColor,
@@ -35,7 +35,7 @@ private val DarkColorScheme = darkColorScheme(
     tertiary = blackColor,
     background = whiteColor,
     outline = purpleColor,
-
+    onPrimary = grayColor,
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -44,15 +44,8 @@ private val LightColorScheme = lightColorScheme(
     tertiary = blackColor,
     background = whiteColor,
     outline = purpleColor,
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    onPrimary = grayColor,
+
 )
 
 @Composable
