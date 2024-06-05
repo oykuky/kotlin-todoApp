@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 500 elemanlı liste oluşturma
-        for (i in 0 until 500) {
+
+        for (i in 0 until 250) {
             todoList.add("Todo $i")
         }
 
